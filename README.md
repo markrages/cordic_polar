@@ -14,9 +14,9 @@ Usage
 
 positional arguments:
 
-* passes             number of CORDIC passes
+* `passes`             number of CORDIC passes
 
-* datatype           datatype (one of int8_t, int16_t, int32_t)
+* `datatype`           datatype (one of int8_t, int16_t, int32_t)
 
 optional arguments:
 
@@ -32,7 +32,7 @@ The units are scaled to the datatype used.
 
 The angle measure is binary radians in the size of the datatype. This fits one rotation in one wrap of the datatype.
 
-The magnitude measure (and x- and y- measures) are arbitrary, but it is recommended to use no more than half of the range of the datatype to prevent internal overflows.
+The magnitude measure is arbitrary, but use no more than the range of the datatype / 2 to prevent internal overflows. For example, with int16_t the limit is 32768 / 2 or 16384. The x- and y- can be any value that maintains a magnitude less than this. For int16\_t safety, it's easier to keep x and y in the square bounded by +/- 16384/sqrt(2) in both dimensions.
 
 Dependencies
 ------------
