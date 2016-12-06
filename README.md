@@ -14,15 +14,15 @@ Usage
 
 positional arguments:
 
-  passes             number of CORDIC passes
+* passes             number of CORDIC passes
 
-  datatype           datatype (one of int8_t, int16_t, int32_t)
+* datatype           datatype (one of int8_t, int16_t, int32_t)
 
 optional arguments:
 
-  -h, --help         show this help message and exit
+  `-h`, `--help`       show this help message and exit
 
-  --pdfname PDFNAME  Filename for error report
+  `--pdfname PDFNAME`  Filename for error report
 
 The code is printed to the output.
 
