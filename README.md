@@ -13,11 +13,15 @@ Usage
 `cordic_polar.py [-h] [--pdfname PDFNAME] passes datatype`
 
 positional arguments:
+
   passes             number of CORDIC passes
+
   datatype           datatype (one of int8_t, int16_t, int32_t)
 
 optional arguments:
+
   -h, --help         show this help message and exit
+
   --pdfname PDFNAME  Filename for error report
 
 The code is printed to the output.
@@ -72,7 +76,7 @@ What error can I expect?
 
 Look at the error report PDF and the error summary comment in the generated code.
 
-Each CORDIC step adds about one bit of resolution, so if you are using 16-bit output and 5 cordic steps, you will see about 11 bits of noise (p-p), and angle resolution of about 2**5 = 32 divisions of the circle (error of 3.125 % p-p).
+Each CORDIC step adds about one bit of resolution, so if you are using 16-bit output and 5 cordic steps, you will see about 11 bits of noise (p-p), and angle resolution of about 2**5 = 32 divisions of the circle (error of 3.125% p-p).
 
 The error report has missing dots
 ---------------------------------
@@ -82,7 +86,7 @@ When errors are very small, they will not show up on the error report. You can t
 I want to use this in an embedded project, but it's GPL!
 --------------------------------------------------------
 
-Only the code itself is GPL-licensed. Its output (the generated routines) can but used however you wish.
+Only the code itself is GPL-licensed. Its output (the generated routines) can be used however you wish.
 
 Example error report
 ====================
