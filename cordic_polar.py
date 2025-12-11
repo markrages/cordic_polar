@@ -79,6 +79,7 @@ class CordicGen:
     
     def get_c_function(self, size="int"):
         function = """#include <stdint.h>
+#include <stddef.h>
 #include <stdbool.h>
 
 #ifndef ATAN_OFFSET
