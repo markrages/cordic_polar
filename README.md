@@ -20,11 +20,13 @@ positional arguments:
 
 optional arguments:
 
-  `-h`, `--help`       show this help message and exit
+  `-h`, `--help`            show this help message and exit
 
-  `--pdfname PDFNAME`  Filename for error report
+  `--pdfname PDFNAME`       Filename for error report
 
-The code is printed to the output.
+  `--headername HEADERNAME` Filename for header
+
+The code is printed to the output. If a header filename is given, a suitable header is written to this file.  Otherwise, the routines are set up for single-header `#include`.
 
 Scaling and Units
 -----------------
@@ -37,7 +39,7 @@ The magnitude measure is arbitrary, but use no more than the range of the dataty
 Dependencies
 ------------
 
-Requires Python 2.  If making an error plot, requires matplotlib.
+Requires Python 3.  If making an error plot, requires matplotlib.
 
 To do error testing, this script compiles its output and runs the code as a subprocess.  This requires a working C compiler on the host, installed as 'cc'.
 
@@ -63,6 +65,13 @@ How performant is it?
 ---------------------
 
 Pretty fast.
+
+What alternatives should I look at?
+-----------------------------------
+
+See the `arm_math.h` libraries, specifically atan2 functions in https://github.com/ARM-software/CMSIS-DSP/tree/main/Source/FastMathFunctions/
+
+These are fixed at 10 passes and don't include rectangular<->polar conversion functions.  But they have the ability to do ARM processor-specific tricks.
 
 Is there a version for floating point?
 --------------------------------------
